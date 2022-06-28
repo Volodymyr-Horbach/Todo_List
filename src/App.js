@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ToDo from './Component/ToDo';
 import ToDoForm from './Component/ToDoForm';
-
+import Popup from './Component/Popup';
 
 
 
@@ -16,11 +16,12 @@ function App() {
         complete: false,
       }
     setTodos([...todos, newItem])
+    localStorage.setItem(JSON.stringify(newItem.id), JSON.stringify(newItem.task))
     }
   }
-
   const removeTask = (id) => {
     setTodos([...todos.filter((todo) => todo.id !== id)])
+    localStorage.removeItem(JSON.stringify(id))
   }
 
   const handleToggle = (id) => {
@@ -30,8 +31,13 @@ function App() {
     ])
   }
 
+  // const popup = () => {
+  //   alert('gggg')
+  // }
+
   return (
     <div className="App">
+      <Popup/>
       <header>
         <h1>My tasks : {todos.length}</h1>
       </header>

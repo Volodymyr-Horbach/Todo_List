@@ -12,6 +12,7 @@ function ToDoForm({addTask}){
         e.preventDefault()
         addTask(userInput)
         setUserInput('')
+        // localStorage.removeItem( Math.random().toString(36) , userInput)
     }
 
     return(

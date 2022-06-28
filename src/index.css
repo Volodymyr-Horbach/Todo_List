@@ -97,11 +97,30 @@ form{
   left: -4px;
   bottom: 5px;
 }
-
+.local{
+  display: flex;
+  flex-direction: column;
+  background-image: url(./img/his.svg);
+  background-repeat: no-repeat;
+  background-size: cover ;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  top: 50px;
+  position: fixed;
+  color: white;
+  cursor: pointer;
+}
+.count{
+  margin-left: -54px;
+    margin-top: 19px;
+    font-size: 25px;
+}
 .strike {
   color: red;
   text-decoration: line-through;
 }
+
 
 
 @media(max-width: 500px){
