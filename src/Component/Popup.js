@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 function Popup({addTask}){
- 
+    
 
     const [local, setLocal] = useState([])
 
@@ -40,7 +40,7 @@ return(
         <div className="popup_task">
             {local.map((value) =>{
                 return(
-                    <ul key={addTask.id}>{value}</ul>
+                    <ul key={Math.random().toString(36)}>{value}</ul>
             )  
             } 
             )}

@@ -7,10 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #222;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 .App {
   text-align: center;
@@ -18,7 +17,6 @@ code {
 form{
   align-items: center;
 }
-
 .App .item-todo {
   padding: 14px;
   width: 50%;
@@ -35,7 +33,6 @@ form{
   border-radius: 5px;
   cursor: pointer;
 }
-
 .App .item-todo .item-text {
   display: inline-block;
   cursor: pointer;
@@ -43,7 +40,6 @@ form{
 .item-text{
   font-size: 2rem;
 }
-
 .App input {
   width: auto;
   padding: 1rem;
@@ -54,7 +50,6 @@ form{
   background: white;
   margin-bottom: 2rem;
 }
-
 .App button {
   padding: 17px 30px;
   border: none;
@@ -73,10 +68,10 @@ form{
 .App h1{
   padding: 1rem;
   background: linear-gradient(
-      90deg,
-      rgba(93, 12, 255, 1) 0%,
-      rgba(155, 0, 250, 1) 100%
-    );
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
   color: aliceblue;
   text-transform: uppercase;
   max-width: 50%;
@@ -87,11 +82,10 @@ form{
   border: 5px solid rgba(255, 255, 255, 0.466);
   border-radius:  10px 10px;
 }
-
 .App .item-todo .item-delete {
-  display: inline-block;
-  cursor: pointer;
+  display: inline;
   float: right;
+  cursor: pointer;
   font-size: 35px;
   position: relative;
   left: -4px;
@@ -100,8 +94,7 @@ form{
 .local{
   display: flex;
   flex-direction: column;
-  background-image: url(./img/his.svg);
-  background-repeat: no-repeat;
+  background: url(./img/his.svg) no-repeat;
   background-size: cover ;
   width: 50px;
   height: 50px;
@@ -112,9 +105,8 @@ form{
   cursor: pointer;
 }
 .count{
-  margin-left: -54px;
-    margin-top: 19px;
-    font-size: 25px;
+  margin: 22px 0px 0px -54px;
+  font-size: 25px;
 }
 .strike {
   color: red;
@@ -135,10 +127,6 @@ form{
   color: white;
   font-size: 34px;
 }
-/* .popup_task .li{
-  color: white;
-  font-size: 34px;
-} */
 .popup{
   box-shadow: 0px 0px 40px 10px rgb(255 12 207);
   width: 70%;
@@ -184,8 +172,6 @@ ul {
   padding: 0;
 }
 
-
-
 @media(max-width: 500px){
   .item-text{
     font-size: 1rem;
@@ -228,8 +214,7 @@ ul {
     top: 45px;
   }
   .count{
-    margin-left: -35px;
-    margin-top: 11px;
+    margin: 11px 0px 0px -35px;
     font-size: 19px;
   }
   .popupBg.active{

@@ -7,7 +7,7 @@ import Popup from './Component/Popup';
 
 function App() {
   const [todos, setTodos] = useState([])
-
+  // function add task & add in localStorage
   const addTask = (userInput) =>{
     if(userInput){
       const newItem = {
@@ -16,12 +16,13 @@ function App() {
         complete: false,
       }
     setTodos([...todos, newItem])
-    
+    // add in localStorage
     localStorage.setItem(JSON.stringify(newItem.id), JSON.stringify(newItem.task))
     }
   }
   const removeTask = (id) => {
     setTodos([...todos.filter((todo) => todo.id !== id)])
+    // remove task in localStorage
     localStorage.removeItem(JSON.stringify(id))
   }
 

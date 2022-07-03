@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 
 function ToDoForm({addTask}){
-    const [userInput, setUserInput] = useState()
+    const [userInput, setUserInput] = useState("")
 
     const handleChange = (e) => {
         setUserInput(e.currentTarget.value)
