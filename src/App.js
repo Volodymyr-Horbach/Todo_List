@@ -16,6 +16,7 @@ function App() {
         complete: false,
       }
     setTodos([...todos, newItem])
+    
     localStorage.setItem(JSON.stringify(newItem.id), JSON.stringify(newItem.task))
     }
   }
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <Popup/>
+      <Popup addTask={addTask}/>
       <header>
         <h1>My tasks : {todos.length}</h1>
       </header>

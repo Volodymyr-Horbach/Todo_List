@@ -2,33 +2,60 @@ import React, { useState } from "react";
 
 
 
-function Popup(){
+function Popup({addTask}){
+ 
+
     const [local, setLocal] = useState([])
+
+    let svg = document.querySelector('.popup')
+    let popupBg = document.querySelector('.popupBg')
 
     const showTask = () =>{
         let value = Object.values(localStorage);
         setLocal(value)
+        svg.classList.toggle('active');
+        popupBg.classList.toggle('active');
 
     }
+
+        document.addEventListener('click', (e)=>{
+          if(e.target === popupBg){
+            svg.classList.remove('active')
+            popupBg.classList.remove('active')
+          };
+        //   console.log(e.target)
+        })
 
 return(
     <>
     <div onClick={showTask} className='local'>
-        <p className='count'>{localStorage.length}</p>
+    {/* {count} */}
+        <p className='count'>
+            {localStorage.length}
+        </p>
     </div>
+    <div className="popupBg">
+
     <div className="popup">
-        <div className="pupup_task">
+        <div className="popup_task">
             {local.map((value) =>{
                 return(
-                    <li key={45}>{value}</li>
+                    <ul key={addTask.id}>{value}</ul>
             )  
             } 
             )}
         </div>
-        <div onClick={()=>{(localStorage.clear())}}>
-            Clear history
+        <div className="clear" onClick={()=>{
+            (localStorage.clear())
+            setLocal([])
+            alert('Are you sure you want to delete tasks?')
+        }}>
+            Сlear history
         </div>
     </div>
+
+    </div>
+
     </>
 )
 }
